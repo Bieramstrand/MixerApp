@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Mixer</title>
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#000000">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Mixer">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#000;--card:#1c1c1e;--card2:#2a2a2d;--ink:#fff;--mute:#9a9aa1;--line:#2c2c2f;
+  --accent:#ff8a3d;--ok:#4ade80;--okbg:rgba(74,222,128,.14);--mid:#a3e635;--midbg:rgba(163,230,53,.13);
+  --warn:#fbbf24;--warnbg:rgba(251,191,36,.14);--bad:#ff6b57;--badbg:rgba(255,107,87,.15);
+}
+html{-webkit-text-size-adjust:100%;background:#000}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;padding-top:env(safe-area-inset-top,0px)}
+svg.i{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.wrap{max-width:640px;margin:0 auto;padding:10px 16px calc(120px + env(safe-area-inset-bottom,0px))}
+.top{display:flex;align-items:center;gap:10px;margin:6px 0 14px;min-height:46px}
+.top h1{flex:1;text-align:center;font-size:20px;margin:0;font-weight:700}
+.top .sp{width:46px}
+.round{width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(60,60,64,.7);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;flex:none;padding:0;position:relative}
+.round svg.i{width:24px;height:24px}
+.round .dotf{position:absolute;top:8px;right:8px;width:9px;height:9px;border-radius:50%;background:var(--accent)}
+.search{flex:1;display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:0 16px;height:46px;color:var(--mute)}
+.search input{background:transparent;border:0;padding:0;height:44px;border-radius:0;flex:1;color:#fff}
+.search input:focus{outline:none}
+h2.sec{font-size:22px;margin:20px 2px 12px;font-weight:700;letter-spacing:-.01em}
+h2.sec.s{font-size:13px;color:var(--mute);text-transform:uppercase;letter-spacing:.07em;margin:20px 4px 8px;font-weight:600}
+.muted{color:var(--mute);font-size:14px}.small{font-size:13px}
+label{display:block;font-size:13px;color:var(--mute);margin:14px 0 5px}
+input,select,textarea{width:100%;font:inherit;font-size:16px;color:#fff;background:var(--card2);border:1px solid transparent;border-radius:12px;padding:12px;-webkit-appearance:none;appearance:none}
+select{background-image:linear-gradient(45deg,transparent 50%,var(--mute) 50%),linear-gradient(135deg,var(--mute) 50%,transparent 50%);background-position:calc(100% - 18px) 50%,calc(100% - 13px) 50%;background-size:5px 5px;background-repeat:no-repeat;padding-right:32px}
+textarea{min-height:100px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:0}
+input[type=color]{padding:3px;height:46px}
+.btn{border:0;background:var(--card2);color:#fff;font:inherit;font-weight:600;padding:13px 16px;border-radius:14px;cursor:pointer;text-decoration:none;display:inline-block;text-align:center}
+.btn.accent{background:var(--accent);color:#111}
+.btn.ghost{background:transparent;border:1px solid var(--line)}
+.btn.danger{background:transparent;color:var(--bad);border:1px solid var(--line)}
+.btn.sm{padding:8px 13px;font-size:14px;border-radius:11px}
+.btn.block{display:block;width:100%}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.btns .btn{flex:1;min-width:120px}
+.chips{display:flex;gap:8px;overflow-x:auto;margin:0 -16px 14px;padding:0 16px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:var(--card);color:#d6d6da;padding:9px 16px;border-radius:99px;font:inherit;font-size:15px;font-weight:600;cursor:pointer}
+.chip.on{background:var(--accent);border-color:var(--accent);color:#111}
+.pillt{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(255,255,255,.35);border-radius:99px;padding:6px 15px;font-size:15px;color:#fff}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 10px;border-radius:99px}
+.tag.ok{background:var(--okbg);color:var(--ok)}.tag.warn{background:var(--warnbg);color:var(--warn)}.tag.bad{background:var(--badbg);color:var(--bad)}.tag.mute{background:var(--card2);color:var(--mute)}
+.card{background:var(--card);border-radius:20px;padding:6px 16px;margin-bottom:12px}
+.card.pad{padding:16px}
+/* Kartenansicht */
+.big{background:var(--card);border-radius:24px;overflow:hidden;margin-bottom:16px;cursor:pointer}
+.hero{position:relative;height:250px;overflow:hidden;background:#0e0e10}
+.hero .artimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .gl{position:absolute;right:5%;top:3%;height:64%;width:auto}
+.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 35%,rgba(0,0,0,.78) 100%)}
+.ttl{position:absolute;left:20px;right:20px;bottom:16px}
+.ttl b{display:block;font-size:30px;line-height:1.1;letter-spacing:-.02em}
+.ttl span{display:block;font-size:18px;color:#e6e6e9;margin-top:3px}
+.foot{display:flex;align-items:center;gap:10px;padding:14px 16px}
+.foot .grow{flex:1}
+.cx{display:flex;gap:4px}
+.cx i{width:18px;height:7px;border-radius:3px;background:#48484d;display:block}
+.cx i.on{background:#fff}
+/* Kompakte Karte */
+.cmp{display:flex;gap:14px;background:var(--card);border-radius:22px;padding:12px;margin-bottom:12px;cursor:pointer}
+.cmp .hero{width:42%;height:auto;min-height:150px;border-radius:16px;flex:none}
+.cmp .hero .gl{height:90%;top:5%;left:50%;transform:translateX(-50%)}
+.cmp .rt{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px;padding:4px 2px}
+.cmp b{font-size:21px;line-height:1.15;letter-spacing:-.01em}
+.cmp .tl{color:#ddd;font-size:15px}
+.cmp .bt{margin-top:auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.addcard{display:block;width:100%;border:1.5px dashed #3a3a3e;background:transparent;color:var(--mute);border-radius:20px;padding:18px;font:inherit;font-weight:600;cursor:pointer;margin-top:4px}
+/* Bar */
+.seg{display:flex;background:var(--card);border-radius:14px;padding:4px;margin-bottom:14px}
+.seg button{flex:1;border:0;background:transparent;color:var(--mute);font:inherit;font-weight:600;padding:10px 6px;border-radius:11px;cursor:pointer}
+.seg button.on{background:var(--card2);color:#fff}
+.row{display:flex;align-items:center;gap:10px;padding:13px 0;border-top:1px solid var(--line)}
+.row:first-child{border-top:0}
+.row .main{flex:1;min-width:0;cursor:pointer}
+.row .name{font-weight:600}
+.row .sub{color:var(--mute);font-size:13px;margin-top:1px}
+.pill{flex:none;border:0;font:inherit;font-size:13px;font-weight:700;padding:8px 12px;border-radius:99px;min-width:88px;cursor:pointer}
+.pill.l3{background:var(--okbg);color:var(--ok)}.pill.l2{background:var(--midbg);color:var(--mid)}.pill.l1{background:var(--warnbg);color:var(--warn)}.pill.l0{background:var(--badbg);color:var(--bad)}
+.banner{background:linear-gradient(135deg,#2b1a0d,#1c1c1e);border:1px solid #4a2f17;border-radius:20px;padding:16px;margin-bottom:14px}
+.banner p{margin:4px 0 12px;font-size:14px;color:#d6d6da}
+.banner b{font-size:17px}
+.total{display:flex;justify-content:space-between;font-weight:700;padding:14px 0 10px;border-top:1px solid var(--line)}
+.addrow{display:flex;gap:8px;padding:12px 0}
+.addrow input{flex:1}
+.dealnote{color:var(--accent);font-weight:700}
+.empty{text-align:center;color:var(--mute);padding:30px 10px}
+/* Tab Leiste */
+.tabbar{position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));max-width:616px;margin:0 auto;height:68px;border-radius:36px;background:rgba(44,44,48,.72);-webkit-backdrop-filter:blur(26px) saturate(1.6);backdrop-filter:blur(26px) saturate(1.6);border:1px solid rgba(255,255,255,.14);box-shadow:0 10px 30px rgba(0,0,0,.5);display:flex;padding:6px;gap:4px;z-index:20}
+.tabbar button{flex:1;border:0;background:transparent;color:#e4e4e7;font:inherit;font-size:11px;font-weight:600;border-radius:30px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;cursor:pointer;position:relative}
+.tabbar button svg.i{width:26px;height:26px}
+.tabbar button.on{background:rgba(255,255,255,.14);color:var(--accent)}
+.badge{position:absolute;top:2px;left:calc(50% + 6px);background:var(--accent);color:#111;font-size:11px;font-weight:800;min-width:18px;height:18px;border-radius:9px;padding:0 5px;display:flex;align-items:center;justify-content:center}
+/* Detail */
+.detail{position:fixed;inset:0;background:#000;z-index:30;overflow-y:auto;-webkit-overflow-scrolling:touch;display:none;overscroll-behavior:contain}
+.detail.open{display:block}
+.dwrap{max-width:640px;margin:0 auto;padding-bottom:calc(50px + env(safe-area-inset-bottom,0px))}
+.dhero{position:relative;height:min(62vh,430px);min-height:330px;background:#0e0e10}
+.dhero .clip{position:absolute;inset:0;overflow:hidden}
+.dhero .artimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.dhero .gl{position:absolute;left:50%;top:9%;height:68%;width:auto;transform:translateX(-50%)}
+.dhero .ttl b{font-size:38px}
+.dhero .ttl span{font-size:20px}
+.dbtns{position:fixed;left:0;right:0;top:calc(10px + env(safe-area-inset-top,0px));z-index:32;max-width:640px;margin:0 auto;display:flex;justify-content:space-between;padding:0 14px;pointer-events:none}
+.dbtns .round{pointer-events:auto;background:rgba(0,0,0,.45);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.dheart{position:absolute;right:20px;bottom:-22px;width:62px;height:62px;border-radius:50%;background:#000;border:0;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:3}
+.dheart svg.i{width:34px;height:34px;color:var(--accent)}
+.dheart.on svg.i{fill:var(--accent)}
+.dbody{padding:0 20px}
+.stats{display:flex;align-items:stretch;margin:34px 0 22px}
+.stats>div{flex:1;display:flex;flex-direction:column;gap:10px;justify-content:space-between}
+.stats small{color:var(--mute);font-size:15px}
+.stats b{font-size:20px;font-weight:500}
+.stats .mid{border-left:1px solid #333;border-right:1px solid #333;padding:0 14px;text-align:center;align-items:center;flex:.8}
+.stats .rt{text-align:right;align-items:flex-end}
+.desc{color:#b4b4ba;font-size:20px;line-height:1.5;margin:0 0 22px}
+.hl{color:var(--accent);font-weight:600}
+hr{border:0;border-top:1px solid #2a2a2d;margin:22px 0}
+.dh{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+.dh h3{margin:0;font-size:30px;letter-spacing:-.02em}
+.dh .m{color:var(--mute);font-size:15px;margin-top:2px}
+.por{display:flex;gap:10px}
+.por button{width:66px;height:50px;border-radius:14px;border:2px solid #4a4a4f;background:transparent;color:#d6d6da;font:inherit;font-size:20px;cursor:pointer}
+.por button.on{border-color:var(--accent);color:var(--accent)}
+.ir{display:flex;align-items:center;gap:16px;padding:12px 0;font-size:21px}
+.ir svg.i{width:26px;height:26px}
+.ir.l3 svg.i,.ir.l2 svg.i{color:var(--ok)}.ir.l1 svg.i{color:var(--warn)}.ir.l0 svg.i{color:var(--bad)}
+.ir .nm{flex:1}
+.ir .q{color:#fff}
+.ir .opt{font-size:13px;color:var(--mute)}
+.garn li{font-size:21px;margin:10px 0}
+.garn{list-style:none;padding:0;margin:0}
+.garn li:before{content:"•";margin-right:12px;color:var(--mute)}
+.mixbtn{border:1.5px solid var(--accent);background:transparent;color:var(--accent);font:inherit;font-weight:700;font-size:19px;padding:10px 18px;border-radius:14px;cursor:pointer}
+.mixbtn.on{background:var(--accent);color:#111}
+.steps{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:20px;margin:14px -20px 0;padding:0 20px;scrollbar-width:none}
+.steps::-webkit-scrollbar{display:none}
+.step{flex:0 0 88%;scroll-snap-align:start;background:var(--card);border-radius:24px;padding:22px;min-height:190px;font-size:22px;line-height:1.4}
+.step .sh{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.step .sh i{width:5px;height:30px;background:var(--accent);border-radius:2px}
+.step .sh b{flex:1;font-size:20px}
+.step .nx{width:54px;height:46px;border-radius:12px;border:0;background:var(--accent);color:#111;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.step p{margin:0}
+.stars{display:flex;gap:16px;margin-top:12px}
+.stars button{border:0;background:transparent;color:var(--accent);padding:0;cursor:pointer}
+.stars svg.i{width:40px;height:40px}
+.stars button.on svg.i{fill:var(--accent)}
+/* Sheets */
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:50;display:none;align-items:flex-end;justify-content:center}
+.ov.open{display:flex}
+.sheet{background:var(--card);width:100%;max-width:640px;max-height:92vh;overflow-y:auto;-webkit-overflow-scrolling:touch;border-radius:26px 26px 0 0;padding:20px 18px calc(26px + env(safe-area-inset-bottom,0px))}
+.sheet h3{margin:0 0 4px;font-size:24px;letter-spacing:-.02em}
+.lvls{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.lvls.c3{grid-template-columns:repeat(3,1fr)}
+.lvls button{border:1px solid #3a3a3e;background:var(--card2);border-radius:12px;padding:11px 2px;font:inherit;font-size:13px;font-weight:700;cursor:pointer;color:var(--mute)}
+.lvls button.on{border-color:var(--accent);color:var(--accent)}
+.lvls button.on.l3{background:var(--okbg);color:var(--ok);border-color:var(--ok)}
+.lvls button.on.l2{background:var(--midbg);color:var(--mid);border-color:var(--mid)}
+.lvls button.on.l1{background:var(--warnbg);color:var(--warn);border-color:var(--warn)}
+.lvls button.on.l0{background:var(--badbg);color:var(--bad);border-color:var(--bad)}
+.rrow{display:grid;grid-template-columns:1fr 1fr 34px;gap:6px;margin-bottom:6px;align-items:center}
+.rrow .x{border:0;background:transparent;color:var(--bad);font-size:24px;cursor:pointer;padding:0}
+.rrow .optl{grid-column:1/3;font-size:12px;color:var(--mute);margin:-2px 0 6px;display:flex;align-items:center;gap:6px}
+.rrow .optl input{width:auto}
+.photoprev{height:120px;border-radius:14px;background:var(--card2) center/cover no-repeat;display:flex;align-items:center;justify-content:center;color:var(--mute);font-size:14px}
+.toast{position:fixed;left:50%;bottom:calc(98px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:#f2f2f2;color:#111;padding:10px 18px;border-radius:99px;font-size:14px;font-weight:600;z-index:70;opacity:0;pointer-events:none;transition:opacity .2s;max-width:90%;text-align:center}
+.toast.show{opacity:1}
+details.card summary{font-weight:600;cursor:pointer;padding:14px 0}
+.hide{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section id="tab_karte"></section>
+  <section id="tab_fav" class="hide"></section>
+  <section id="tab_bar" class="hide"></section>
+  <section id="tab_more" class="hide"></section>
+</div>
+
+<div class="detail" id="detail"></div>
+
+<nav class="tabbar" id="tabbar">
+  <button data-tab="karte" class="on"><svg class="i" viewBox="0 0 24 24"><rect x="5" y="3.5" width="14" height="17" rx="2.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg>Karte</button>
+  <button data-tab="fav"><svg class="i" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-9.2-9.3A5 5 0 0 1 12 7.6a5 5 0 0 1 9.2 3.1C19.5 15.400 12 20 12 20z"/></svg>Favoriten</button>
+  <button data-tab="bar"><svg class="i" viewBox="0 0 24 24"><path d="M6.500 3h3v4l1.500 2.500V20a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1V9.500L6.500 7z"/><path d="M15 9.500h3l1.500 2.500v8a1 1 0 0 1-1 1h-3.500a1 1 0 0 1-1-1V12z"/></svg>Bar<span class="badge hide" id="shopBadge">0</span></button>
+  <button data-tab="more"><svg class="i" viewBox="0 0 24 24"><path d="M4 7h9M18 7h2M4 17h3M12 17h8"/><circle cx="15.500" cy="7" r="2.200"/><circle cx="9.500" cy="17" r="2.200"/></svg>Einstellungen</button>
+</nav>
+
+<div class="ov" id="ov"><div class="sheet" id="sheet"></div></div>
+<div class="toast" id="toast"></div>
+<input type="file" id="fileIn" accept="application/json,.json" class="hide">
+<input type="file" id="photoIn" accept="image/*" class="hide">
+
+<script>
+/* FIREBASE EINSTELLUNGEN
+   Gleiches Projekt wie die anderen Haushalts Apps. Mixer nutzt die bestehende Sammlung tagwerk,
+   in der die Regeln schon passen, mit einem eigenen Dokument mixer. */
+window.MIXER_FIREBASE={
+  apiKey:"AIzaSyBFbKIBKr0gr621e8XSljAG4lGXOSrIxwo",
+  authDomain:"homedashboard-8d951.firebaseapp.com",
+  projectId:"homedashboard-8d951",
+  storageBucket:"homedashboard-8d951.firebasestorage.app",
+  messagingSenderId:"443725141758",
+  appId:"1:443725141758:web:64331ff8100f27acd037af",
+  collection:"tagwerk",
+  room:"mixer"
+};
+</script>
+<script>
+(function(){
+"use strict";
+var APP_VERSION="2.0.1",KEY="mixer_v1";
+var LT={0:"Leer",1:"Fast leer",2:"Halb",3:"Voll"};
+var LEVELS=[3,2,1,0];
+var CATS=["Spirituosen","Liköre","Sirup und Bitter","Alkoholfrei","Frisch","Sonstiges"];
+var GLASSES=["Tumbler","Highball","Coupe","Martiniglas","Cocktailschale","Weinglas","Becher","Sonstiges"];
+var METHODS=["Geschüttelt","Gerührt","Im Glas aufbauen","Im Glas gestoßen","Gemixt"];
+var BASES=["Gin","Rum","Wodka","Tequila","Whiskey","Cachaça","Brandy","Likör","Wein und Sekt","Alkoholfrei"];
+
+var IC={
+  back:'<path d="M15 5l-7 7 7 7"/>',
+  edit:'<path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.500 6.500l4 4"/>',
+  heart:'<path d="M12 20s-7.500-4.600-9.200-9.300A5 5 0 0 1 12 7.600a5 5 0 0 1 9.200 3.100C19.500 15.400 12 20 12 20z"/>',
+  bottle:'<path d="M10 3h4v3.500l2 3V20a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V9.500l2-3z"/><path d="M8 13h8"/>',
+  drop:'<path d="M12 3.500C9 8 6.500 10.500 6.500 14a5.500 5.500 0 0 0 11 0C17.500 10.500 15 8 12 3.500z"/>',
+  leaf:'<path d="M5 19C5 10 10 5 19 5c0 9-5 14-14 14z"/><path d="M5 19l8-8"/>',
+  star:'<path d="M12 3.500l2.700 5.600 6.100.8-4.500 4.200 1.100 6.100L12 17.300 6.600 20.200l1.100-6.100L3.200 9.900l6.100-.8z"/>',
+  search:'<circle cx="11" cy="11" r="6.500"/><path d="M16 16l4.500 4.500"/>',
+  filter:'<path d="M4 7h10M18 7h2M4 17h3M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="9.500" cy="17" r="2"/>',
+  plus:'<path d="M12 5v14M5 12h14"/>',
+  arrow:'<path d="M5 12h14M13 6l6 6-6 6"/>',
+  check:'<path d="M5 12.500l4.500 4.500L19 7.500"/>'
+};
+function svg(p,cls){return '<svg class="i'+(cls?' '+cls:'')+'" viewBox="0 0 24 24">'+p+'</svg>';}
+
+function $(id){return document.getElementById(id);}
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+function todayIso(){var d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");}
+function deDate(iso){if(!iso)return "";var p=iso.split("-");return p[2]+"."+p[1]+"."+p[0].slice(2);}
+function money(n){return (Math.round(n*100)/100).toLocaleString("de-DE",{minimumFractionDigits:2,maximumFractionDigits:2})+" €";}
+function uid(p){return p+"_"+Date.now().toString(36)+Math.random().toString(36).slice(2,6);}
+function toast(t){var e=$("toast");e.textContent=t;e.classList.add("show");clearTimeout(toast.t);toast.t=setTimeout(function(){e.classList.remove("show");},2200);}
+function hexA(hex,a){var h=String(hex||"#d98a2b").replace("#","");if(h.length===3)h=h.split("").map(function(x){return x+x;}).join("");var n=parseInt(h,16);return "rgba("+((n>>16)&255)+","+((n>>8)&255)+","+(n&255)+","+a+")";}
+
+/* ---------- Startdaten ---------- */
+var SEED_ING=[
+  ["wodka","Wodka","Spirituosen"],["rum_weiss","Weißer Rum","Spirituosen"],["cachaca","Cachaça","Spirituosen"],
+  ["tequila","Tequila Blanco","Spirituosen"],["bourbon","Bourbon","Spirituosen"],
+  ["triple_sec","Triple Sec","Liköre"],["kaffeelikoer","Kaffeelikör","Liköre"],
+  ["zuckersirup","Zuckersirup","Sirup und Bitter"],["angostura","Angostura Bitter","Sirup und Bitter"],["rohrzucker","Rohrzucker","Sirup und Bitter"],
+  ["soda","Sodawasser","Alkoholfrei"],
+  ["espresso","Espresso","Frisch"],["limetten","Limetten","Frisch"],["minze","Minze","Frisch"],["orangen","Orangen","Frisch"],
+  ["salz","Salz","Sonstiges"]
+];
+var SEED_CK=[
+  {id:"ck_espresso_martini",name:"Espresso Martini",tagline:"Kräftig, cremig und hellwach",glass:"Coupe",base:"Wodka",method:"Geschüttelt",time:3,cx:2,color:"#6b3f24",
+   desc:"ist ein kräftiger Drink aus Wodka, Kaffeelikör und frischem Espresso mit feiner Schaumkrone. Perfekt nach dem Essen oder als Start in einen langen Abend.",
+   ings:[{i:"wodka",q:"5 cl"},{i:"kaffeelikoer",q:"3 cl"},{i:"espresso",q:"3 cl, frisch gebrüht und abgekühlt"},{i:"zuckersirup",q:"1 cl, nach Geschmack",o:true}],
+   steps:["Eine Coupe mit Eis oder im Gefrierfach kühlen.","5 cl Wodka, 3 cl Kaffeelikör und 3 cl frischen Espresso mit reichlich Eis etwa 15 Sekunden kräftig shaken.","Zweifach in die gekühlte Coupe abseihen, so entsteht die feine Schaumkrone. Mit 3 Kaffeebohnen garnieren."],garnish:"3 Kaffeebohnen"},
+  {id:"ck_caipirinha",name:"Caipirinha",tagline:"Brasiliens frischer Nationaldrink",glass:"Tumbler",base:"Cachaça",method:"Im Glas gestoßen",time:3,cx:1,color:"#c9e08a",
+   desc:"ist der Nationaldrink Brasiliens: Cachaça, Limette und Zucker auf Crushed Ice. Herb, frisch und erstaunlich süffig.",
+   ings:[{i:"cachaca",q:"5 cl"},{i:"limetten",q:"1 Limette, in Achtel geschnitten"},{i:"rohrzucker",q:"2 TL"}],
+   steps:["Die Limette in Achtel schneiden und mit 2 TL Rohrzucker im Tumbler kräftig zerdrücken.","Das Glas bis zum Rand mit Crushed Ice füllen.","5 cl Cachaça darübergeben und kurz umrühren."],garnish:""},
+  {id:"ck_mojito",name:"Mojito",tagline:"Frisch, minzig und spritzig",glass:"Highball",base:"Rum",method:"Im Glas aufbauen",time:4,cx:2,color:"#cfe8a0",
+   desc:"ist ein kubanischer Klassiker mit Rum, Minze, Limette und Soda. Leicht, spritzig und ideal für warme Abende.",
+   ings:[{i:"rum_weiss",q:"4 cl"},{i:"limetten",q:"Saft einer halben Limette"},{i:"rohrzucker",q:"2 TL"},{i:"minze",q:"8 bis 10 Blätter"},{i:"soda",q:"zum Auffüllen"}],
+   steps:["Minze, 2 TL Rohrzucker und den Saft einer halben Limette im Glas nur leicht andrücken, nicht zerreiben.","Mit Crushed Ice füllen, 4 cl Rum zugeben und umrühren.","Mit Soda auffüllen, einmal von unten nach oben heben und mit einem Minzzweig garnieren."],garnish:"Minzzweig"},
+  {id:"ck_margarita",name:"Margarita",tagline:"Sauer, süß und salzig",glass:"Cocktailschale",base:"Tequila",method:"Geschüttelt",time:3,cx:2,color:"#e6ee9a",
+   desc:"verbindet Tequila, Triple Sec und frische Limette zu einem Klassiker mit perfektem Gleichgewicht aus sauer, süß und salzig.",
+   ings:[{i:"tequila",q:"5 cl"},{i:"triple_sec",q:"2 cl"},{i:"limetten",q:"2 cl frischer Saft"},{i:"salz",q:"für den Glasrand",o:true}],
+   steps:["Den Glasrand mit einer Limettenspalte befeuchten und in Salz drehen.","5 cl Tequila, 2 cl Triple Sec und 2 cl Limettensaft mit Eis kräftig shaken.","In die Schale abseihen und mit einer Limettenscheibe garnieren."],garnish:"Limettenscheibe"},
+  {id:"ck_old_fashioned",name:"Old Fashioned",tagline:"Zeitlose Eleganz",glass:"Tumbler",base:"Whiskey",method:"Im Glas gerührt",time:3,cx:1,color:"#b5622a",
+   desc:"ist einer der ältesten Cocktails überhaupt: Bourbon, ein Hauch Zucker und Bitter. Ruhig gerührt, ohne Schnickschnack.",
+   ings:[{i:"bourbon",q:"6 cl"},{i:"zuckersirup",q:"1 cl"},{i:"angostura",q:"2 bis 3 Spritzer"},{i:"orangen",q:"1 Zeste zum Abziehen",o:true}],
+   steps:["1 cl Zuckersirup und 2 bis 3 Spritzer Angostura im Tumbler verrühren.","Eiswürfel und 6 cl Bourbon zugeben und etwa 30 Sekunden kalt rühren.","Eine Orangenzeste über dem Drink ausdrücken und ins Glas geben."],garnish:"Orangenzeste"}
+];
+function seedCk(s){var c=JSON.parse(JSON.stringify(s));c.fav=false;c.custom=false;c.rating=0;c.seeded=true;return c;}
+function seed(){
+  return {v:2,rev:0,setup:false,
+    ingredients:SEED_ING.map(function(a){return {id:a[0],name:a[1],cat:a[2],level:0,want:false,price:null,priceDate:"",deal:"",link:""};}),
+    cocktails:SEED_CK.map(seedCk)};
+}
+function splitSteps(t){
+  t=String(t||"").trim();if(!t)return [];
+  var parts=t.indexOf("\n")>=0?t.split(/\n+/):t.split(/\.\s+/);
+  return parts.map(function(p){return p.trim();}).filter(Boolean).map(function(p){return /[.!?]$/.test(p)?p:p+".";});
+}
+function migrate(s){
+  s.cocktails.forEach(function(c){
+    var sd=null;SEED_CK.forEach(function(x){if(x.id===c.id)sd=x;});
+    if(sd&&!c.seeded&&!c.custom){["tagline","desc","glass","base","method","time","cx","color"].forEach(function(k){c[k]=sd[k];});c.steps=sd.steps.slice();c.seeded=true;}
+    if(typeof c.steps==="string")c.steps=splitSteps(c.steps);
+    if(!Array.isArray(c.steps))c.steps=[];
+    if(c.cx==null)c.cx=1;
+    if(!c.color)c.color="#d98a2b";
+    if(c.rating==null)c.rating=0;
+    ["tagline","desc","base","method","garnish"].forEach(function(k){if(c[k]==null)c[k]="";});
+    if(c.time==null)c.time=0;
+  });
+  return s;
+}
+
+/* ---------- Zustand ---------- */
+var state=load();
+function load(){
+  try{var s=JSON.parse(localStorage.getItem(KEY)||"null");if(s&&Array.isArray(s.ingredients)&&Array.isArray(s.cocktails))return migrate(s);}catch(e){}
+  return migrate(seed());
+}
+function persist(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}}
+var pushTimer=null;
+function save(){state.rev=(state.rev||0)+1;persist();render();schedulePush();}
+function ing(id){for(var i=0;i<state.ingredients.length;i++)if(state.ingredients[i].id===id)return state.ingredients[i];return null;}
+function ingByName(n){n=String(n||"").trim().toLowerCase();for(var i=0;i<state.ingredients.length;i++)if(state.ingredients[i].name.toLowerCase()===n)return state.ingredients[i];return null;}
+function ckById(id){for(var i=0;i<state.cocktails.length;i++)if(state.cocktails[i].id===id)return state.cocktails[i];return null;}
+function amazonUrl(g){
+  var l=(g.link||"").trim();
+  if(l)return /^https?:\/\//i.test(l)?l:"https://"+l;
+  return "https://www.amazon.de/s?k="+encodeURIComponent(g.name);
+}
+function parsePrice(s){s=String(s||"").replace(/[^0-9,.]/g,"").replace(",",".");if(!s)return null;var n=parseFloat(s);return isNaN(n)?null:n;}
+
+/* ---------- Cocktail Logik ---------- */
+function avail(c){
+  var miss=[],low=[];
+  c.ings.forEach(function(r){
+    if(r.o)return;
+    var g=ing(r.i);
+    if(!g||g.level===0)miss.push(g?g.name:"?");
+    else if(g.level===1)low.push(g.name);
+  });
+  return {miss:miss,low:low};
+}
+function baseOf(c){
+  if(c.base)return c.base;
+  for(var i=0;i<c.ings.length;i++){var g=ing(c.ings[i].i);if(g&&g.cat==="Spirituosen")return g.name.replace(/^Weißer /,"").replace(/ Blanco$/,"");}
+  for(var j=0;j<c.ings.length;j++){var h=ing(c.ings[j].i);if(h&&h.cat==="Liköre")return "Likör";}
+  return "";
+}
+function fmtNum(n){n=Math.round(n*2)/2;return String(n).replace(".",",");}
+function num(s){return parseFloat(String(s).replace(",","."));}
+function scaleQty(q,f){if(f===1)return q;return String(q).replace(/\d+(?:[.,]\d+)?/g,function(m){return fmtNum(num(m)*f);});}
+var UNIT_RE=/(\d+(?:[.,]\d+)?)(?:(\s+bis\s+)(\d+(?:[.,]\d+)?))?(\s*)(cl|ml|TL|EL|Spritzer|Blätter)/g;
+function stepHtml(t,f){
+  return esc(t).replace(UNIT_RE,function(m,a,bis,b,sp,u){
+    var x=f===1?a:fmtNum(num(a)*f),y=b?(f===1?b:fmtNum(num(b)*f)):"";
+    return '<span class="hl">'+x+(bis?bis+y:"")+sp+u+'</span>';
+  });
+}
+
+/* ---------- Bilder: gezeichnetes Glas oder eigenes Foto ---------- */
+var fbApi=null,imgPending={};
+function imgLocal(id){try{return localStorage.getItem("mixer_img_"+id);}catch(e){return null;}}
+function fetchImg(id){
+  if(imgPending[id]||!fbApi)return;imgPending[id]=1;
+  fbApi.fs.getDoc(fbApi.fs.doc(fbApi.db,FB.collection,"mixer_foto_"+id)).then(function(s){
+    if(s.exists()&&s.data().d){try{localStorage.setItem("mixer_img_"+id,s.data().d);}catch(e){}render();}
+  }).catch(function(){});
+}
+function glassSvg(c){
+  var col=c.color||"#d98a2b",id=String(c.id).replace(/[^a-z0-9]/gi,""),g=c.glass||"Tumbler";
+  var has=function(k){return c.ings.some(function(r){return r.i===k;});};
+  var st='stroke="rgba(255,255,255,.65)" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"';
+  var gl='fill="rgba(255,255,255,.07)"';
+  var s='<svg class="gl" viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="lq'+id+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+col+'" stop-opacity=".96"/><stop offset="1" stop-color="'+col+'" stop-opacity=".62"/></linearGradient></defs>';
+  var topY=30,rimX=72;
+  if(g==="Coupe"||g==="Cocktailschale"){
+    s+='<path d="M20 30 Q22 53 50 56 Q78 53 80 30 Z" '+gl+' '+st+'/><path d="M22.500 34 Q25 51.500 50 54 Q75 51.500 77.500 34 Z" fill="url(#lq'+id+')"/>';
+    s+='<path d="M50 56 V83" '+st+' fill="none"/><path d="M34 85 Q50 82 66 85" '+st+' fill="none"/>';topY=34;rimX=74;
+    if(has("espresso")){s+='<ellipse cx="50" cy="35" rx="26" ry="3.600" fill="#ead7b6"/><ellipse cx="44" cy="35" rx="2.400" ry="1.400" fill="#2a1810"/><ellipse cx="50" cy="36" rx="2.400" ry="1.400" fill="#2a1810"/><ellipse cx="56" cy="35" rx="2.400" ry="1.400" fill="#2a1810"/>';}
+  }else if(g==="Martiniglas"){
+    s+='<path d="M18 28 H82 L50 59 Z" '+gl+' '+st+'/><path d="M25 33 H75 L50 57 Z" fill="url(#lq'+id+')"/><path d="M50 59 V83" '+st+' fill="none"/><path d="M34 85 Q50 82 66 85" '+st+' fill="none"/>';topY=28;rimX=78;
+  }else if(g==="Weinglas"){
+    s+='<path d="M30 22 Q27 58 50 60 Q73 58 70 22 Z" '+gl+' '+st+'/><path d="M29 38 Q28 57 50 59 Q72 57 71 38 Z" fill="url(#lq'+id+')"/><path d="M50 60 V83" '+st+' fill="none"/><path d="M34 85 Q50 82 66 85" '+st+' fill="none"/>';topY=22;rimX=70;
+  }else if(g==="Highball"){
+    s+='<path d="M34 12 L66 12 L63 88 L37 88 Z" '+gl+' '+st+'/><path d="M34.500 28 H65.500 L63 86.500 H37 Z" fill="url(#lq'+id+')"/><rect x="40" y="34" width="14" height="14" rx="2" fill="rgba(255,255,255,.22)" transform="rotate(-8 47 41)"/><rect x="46" y="54" width="14" height="14" rx="2" fill="rgba(255,255,255,.2)" transform="rotate(10 53 61)"/><rect x="39" y="70" width="13" height="13" rx="2" fill="rgba(255,255,255,.18)"/>';topY=12;rimX=65;
+  }else if(g==="Becher"){
+    s+='<path d="M30 26 L70 26 L66 86 L34 86 Z" '+gl+' '+st+'/><path d="M31 40 H69 L66 85 H34 Z" fill="url(#lq'+id+')"/>';topY=26;rimX=68;
+  }else{
+    s+='<path d="M27 26 L73 26 L68 86 L32 86 Z" '+gl+' '+st+'/><path d="M28.200 40 H71.800 L68 85 H32 Z" fill="url(#lq'+id+')"/><rect x="36" y="44" width="15" height="15" rx="2.500" fill="rgba(255,255,255,.24)" transform="rotate(-9 43 51)"/><rect x="50" y="52" width="15" height="15" rx="2.500" fill="rgba(255,255,255,.2)" transform="rotate(12 57 59)"/><rect x="38" y="66" width="14" height="14" rx="2.500" fill="rgba(255,255,255,.18)"/>';topY=26;rimX=70;
+  }
+  if(has("minze")){s+='<g transform="translate('+(rimX-8)+' '+(topY-3)+')"><ellipse cx="0" cy="-6" rx="4.600" ry="7.500" fill="#5fbf6a" transform="rotate(-25)"/><ellipse cx="7" cy="-7" rx="4.600" ry="7.500" fill="#4aa85a" transform="rotate(20)"/><ellipse cx="3" cy="-10" rx="4" ry="6.500" fill="#79d083"/></g>';}
+  if(has("limetten")&&g!=="Highball"||(has("limetten")&&g==="Highball"&&!has("minze"))){s+='<g transform="translate('+(rimX+3)+' '+(topY+1)+')"><circle r="8" fill="#9fd35c" stroke="#d9f5a6" stroke-width="1.600"/><path d="M0 -6.500V6.500M-6.500 0H6.500M-4.600 -4.600L4.600 4.600M4.600 -4.600L-4.600 4.600" stroke="#d9f5a6" stroke-width=".9"/></g>';}
+  if(has("orangen")){s+='<g transform="translate('+(rimX+3)+' '+(topY+1)+')"><circle r="8" fill="#ff9a2e" stroke="#ffd08a" stroke-width="1.600"/><path d="M0 -6.500V6.500M-6.500 0H6.500M-4.600 -4.600L4.600 4.600M4.600 -4.600L-4.600 4.600" stroke="#ffd08a" stroke-width=".9"/></g>';}
+  return s+'</svg>';
+}
+function art(c){
+  var src=c.photo?imgLocal(c.id):null;
+  if(c.photo&&!src)fetchImg(c.id);
+  var bg='background:radial-gradient(circle at 55% 42%,'+hexA(c.color,.5)+' 0%,'+hexA(c.color,.12)+' 48%,transparent 72%),linear-gradient(180deg,#17171a,#0b0b0d)';
+  if(src)return '<img class="artimg" src="'+src+'" alt="">';
+  return '<div style="position:absolute;inset:0;'+bg+'"></div>'+glassSvg(c);
+}
+function cxBars(n){var h='<span class="cx">';for(var i=0;i<3;i++)h+='<i'+(i<n?' class="on"':'')+'></i>';return h+'</span>';}
+
+/* ---------- Ansicht ---------- */
+var ui={tab:"karte",q:"",fAvail:"all",fBase:"all",favF:"fav",seg:"stock",barF:"all",barQ:"",detailId:null,por:1};
+
+function render(){
+  renderKarte();renderFav();renderBar();renderMore();renderDetail();
+  var n=shopList().length,b=$("shopBadge");
+  b.textContent=n;b.classList.toggle("hide",!n);
+}
+function setTab(t){
+  ui.tab=t;
+  ["karte","fav","bar","more"].forEach(function(k){$("tab_"+k).classList.toggle("hide",k!==t);});
+  Array.prototype.forEach.call(document.querySelectorAll("#tabbar button"),function(b){b.classList.toggle("on",b.getAttribute("data-tab")===t);});
+  window.scrollTo(0,0);
+}
+function chip(grp,val,label,cur){return '<button class="chip'+(cur===val?' on':'')+'" data-act="'+grp+'" data-v="'+esc(val)+'">'+esc(label)+'</button>';}
+function topbar(title,plusAct){return '<div class="top"><div class="sp"></div><h1>'+esc(title)+'</h1>'+(plusAct?'<button class="round" data-act="'+plusAct+'" aria-label="Hinzufügen">'+svg(IC.plus)+'</button>':'<div class="sp"></div>')+'</div>';}
+
+function statusTag(c){
+  if(!state.setup)return "";
+  var a=avail(c);
+  if(!a.miss.length)return '<span class="tag ok">Mixbar</span>';
+  if(a.miss.length===1)return '<span class="tag warn">Fehlt: '+esc(a.miss[0])+'</span>';
+  return '<span class="tag mute">'+a.miss.length+' fehlen</span>';
+}
+function matches(c,q){
+  if(ui.fAvail!=="all"&&state.setup){var n=avail(c).miss.length;if(ui.fAvail==="mix"&&n!==0)return false;if(ui.fAvail==="near"&&n!==1)return false;}
+  if(ui.fBase!=="all"&&baseOf(c)!==ui.fBase)return false;
+  if(q){var hay=(c.name+" "+c.tagline+" "+baseOf(c)+" "+c.ings.map(function(r){var g=ing(r.i);return g?g.name:"";}).join(" ")).toLowerCase();if(hay.indexOf(q)<0)return false;}
+  return true;
+}
+function sortList(list){
+  return list.slice().sort(function(a,b){
+    var na=state.setup?avail(a).miss.length:0,nb=state.setup?avail(b).miss.length:0;
+    return na-nb||a.name.localeCompare(b.name,"de");
+  });
+}
+function bigCard(c){
+  var b=baseOf(c);
+  return '<div class="big" data-act="openCk" data-id="'+esc(c.id)+'"><div class="hero">'+art(c)+'<div class="shade"></div><div class="ttl"><b>'+esc(c.name)+'</b><span>'+esc(c.tagline||c.glass)+'</span></div></div>'+
+    '<div class="foot">'+(b?'<span class="pillt">'+esc(b)+'</span>':'')+statusTag(c)+'<span class="grow"></span>'+cxBars(c.cx)+'</div></div>';
+}
+function cmpCard(c){
+  var b=baseOf(c);
+  return '<div class="cmp" data-act="openCk" data-id="'+esc(c.id)+'"><div class="hero">'+art(c)+'</div><div class="rt"><b>'+esc(c.name)+'</b><div class="tl">'+esc(c.tagline||"")+'</div><div class="bt">'+(b?'<span class="pillt">'+esc(b)+'</span>':'')+statusTag(c)+'</div></div></div>';
+}
+function renderKarte(){
+  var q=ui.q.trim().toLowerCase(),active=ui.fAvail!=="all"||ui.fBase!=="all";
+  var h='<div class="top"><div class="search">'+svg(IC.search)+'<input id="q" type="search" placeholder="Cocktails suchen" value="'+esc(ui.q)+'"></div><button class="round" data-act="openFilter" aria-label="Filter">'+svg(IC.filter)+(active?'<i class="dotf"></i>':'')+'</button></div>';
+  if(!state.setup)h+='<div class="banner"><b>Bestand einstellen</b><p>Sag Mixer, was du im Schrank hast. Dann zeigt die Karte, was du gerade mixen kannst.</p><button class="btn accent sm" data-act="goBar">Zur Bar</button></div>';
+  var list=sortList(state.cocktails.filter(function(c){return matches(c,q);}));
+  var classics=list.filter(function(c){return !c.custom;}),own=list.filter(function(c){return c.custom;});
+  if(classics.length){h+='<h2 class="sec">Klassiker</h2>'+classics.map(bigCard).join("");}
+  if(own.length){h+='<h2 class="sec">Eigene Mischungen</h2>'+own.map(bigCard).join("");}
+  if(!list.length)h+='<div class="empty">Nichts gefunden.</div>';
+  h+='<button class="addcard" data-act="newCk">+ Eigenen Cocktail hinzufügen</button>';
+  $("tab_karte").innerHTML=h;
+}
+function renderFav(){
+  var f=ui.favF;
+  var list=sortList(state.cocktails.filter(function(c){return f==="all"?true:(f==="own"?c.custom:c.fav);}));
+  var h=topbar("Favoriten","newCk");
+  h+='<div class="chips">'+chip("favf","fav","Favoriten",f)+chip("favf","own","Eigene Mischungen",f)+chip("favf","all","Alle",f)+'</div>';
+  if(!list.length)h+='<div class="empty">'+(f==="fav"?"Tippe auf das Herz in einem Cocktail, dann erscheint er hier.":(f==="own"?"Hier landen deine eigenen Mischungen.":"Noch keine Cocktails."))+'</div>';
+  h+=list.map(cmpCard).join("");
+  $("tab_fav").innerHTML=h;
+}
+
+function renderBar(){
+  var h=topbar("Bar","newIng");
+  var n=shopList().length;
+  h+='<div class="seg"><button data-act="seg" data-v="stock" class="'+(ui.seg==="stock"?'on':'')+'">Bestand</button><button data-act="seg" data-v="shop" class="'+(ui.seg==="shop"?'on':'')+'">Einkaufsliste'+(n?' ('+n+')':'')+'</button></div>';
+  h+=ui.seg==="stock"?barStock():barShop();
+  $("tab_bar").innerHTML=h;
+}
+function barStock(){
+  var q=ui.barQ.trim().toLowerCase(),f=ui.barF,h="";
+  var total=state.ingredients.length,fehlt=state.ingredients.filter(function(g){return g.level<=1;}).length;
+  if(!state.setup)h+='<div class="banner"><b>Bestand einstellen</b><p>Tippe bei jeder Zutat auf das farbige Feld rechts, bis es zu deinem Vorrat passt: Voll, Halb, Fast leer oder Leer.</p><button class="btn accent sm" data-act="setupDone">Fertig, Bestand stimmt</button></div>';
+  h+='<div class="search" style="margin-bottom:12px">'+svg(IC.search)+'<input id="barQ" type="search" placeholder="Zutat suchen" value="'+esc(ui.barQ)+'"></div>';
+  h+='<div class="chips">'+chip("barf","all","Alle "+total,f)+chip("barf","low","Fehlt oder fast leer "+fehlt,f)+chip("barf","have","Vorhanden "+(total-fehlt),f)+'</div>';
+  var any=false;
+  CATS.forEach(function(cat){
+    var items=state.ingredients.filter(function(g){
+      if((g.cat||"Sonstiges")!==cat)return false;
+      if(f==="low"&&g.level>1)return false;
+      if(f==="have"&&g.level<2)return false;
+      if(q&&g.name.toLowerCase().indexOf(q)<0)return false;
+      return true;
+    }).sort(function(a,b){return a.name.localeCompare(b.name,"de");});
+    if(!items.length)return;any=true;
+    h+='<h2 class="sec s">'+esc(cat)+'</h2><div class="card">'+items.map(ingRow).join("")+'</div>';
+  });
+  if(!any)h+='<div class="empty">Nichts gefunden.</div>';
+  return h;
+}
+function ingRow(g){
+  var sub=[];
+  if(g.price!=null)sub.push(money(g.price)+(g.priceDate?' · Stand '+deDate(g.priceDate):''));
+  if(g.deal)sub.push('<span class="dealnote">'+esc(g.deal)+'</span>');
+  if(g.want&&g.level>1)sub.push("steht auf der Liste");
+  return '<div class="row"><div class="main" data-act="editIng" data-id="'+esc(g.id)+'"><div class="name">'+esc(g.name)+'</div>'+(sub.length?'<div class="sub">'+sub.join(" · ")+'</div>':'')+'</div><button class="pill l'+g.level+'" data-act="cycle" data-id="'+esc(g.id)+'">'+LT[g.level]+'</button></div>';
+}
+function shopList(){
+  return state.ingredients.filter(function(g){return g.want||(state.setup&&g.level<=1);}).sort(function(a,b){return a.name.localeCompare(b.name,"de");});
+}
+function barShop(){
+  var list=shopList(),h="";
+  if(!state.setup)h+='<div class="card pad muted small">Stelle zuerst unter Bestand deinen Vorrat ein. Danach erscheint hier automatisch, was leer oder fast leer ist.</div>';
+  h+='<div class="card"><div class="addrow"><input id="shopAdd" placeholder="Zutat ergänzen"><button class="btn accent" data-act="shopAdd">Hinzu</button></div></div>';
+  if(!list.length)return h+'<div class="empty">Die Einkaufsliste ist leer.</div>';
+  var sum=0,cnt=0;
+  h+='<div class="card">';
+  list.forEach(function(g){
+    var sub=[g.level===0?"Leer":(g.level===1?"Fast leer":"Von dir markiert")];
+    if(g.price!=null){sub.push(money(g.price)+(g.priceDate?' · Stand '+deDate(g.priceDate):''));sum+=g.price;cnt++;}
+    if(g.deal)sub.push('<span class="dealnote">'+esc(g.deal)+'</span>');
+    h+='<div class="row"><div class="main" data-act="editIng" data-id="'+esc(g.id)+'"><div class="name">'+esc(g.name)+'</div><div class="sub">'+sub.join(" · ")+'</div></div><a class="btn ghost sm" href="'+esc(amazonUrl(g))+'" target="_blank" rel="noopener">Amazon</a><button class="btn accent sm" data-act="bought" data-id="'+esc(g.id)+'">Gekauft</button></div>';
+  });
+  if(cnt)h+='<div class="total"><span>Geschätzt'+(cnt<list.length?' ('+cnt+' von '+list.length+' mit Preis)':'')+'</span><span>'+money(sum)+'</span></div>';
+  return h+'</div>';
+}
+
+var syncText="Nur auf diesem Gerät gespeichert.";
+function renderMore(){
+  var h=topbar("Einstellungen",null);
+  h+='<h2 class="sec s">Teilen mit Julia</h2><div class="card pad"><div id="syncNote">'+esc(syncText)+'</div><div class="muted small" style="margin-top:6px">Bar, Bestand, Preise, Cocktails und Fotos sind für euch beide live gleich.</div></div>';
+  h+='<h2 class="sec s">Cocktails</h2><div class="card pad"><button class="btn block" data-act="restoreSeed">Standardcocktails wiederherstellen</button><div class="muted small" style="margin-top:10px">Legt Espresso Martini, Caipirinha, Mojito, Margarita und Old Fashioned wieder an, falls du einen gelöscht hast. Eigene Änderungen bleiben erhalten.</div></div>';
+  h+='<details class="card"><summary>Datensicherung</summary><div class="btns" style="margin-top:0;padding-bottom:12px"><button class="btn" data-act="exportData">Als Datei speichern</button><button class="btn" data-act="importData">Aus Datei laden</button></div><div class="muted small" style="padding-bottom:14px">Die Datei enthält Bar, Bestand, Preise und alle Cocktails, aber keine Fotos.</div></details>';
+  h+='<div class="muted small" style="text-align:center;margin-top:18px">Mixer Version '+APP_VERSION+'</div>';
+  $("tab_more").innerHTML=h;
+}
+
+/* ---------- Detailseite ---------- */
+var wl=null;
+function renderDetail(){
+  if(!ui.detailId)return;
+  var c=ckById(ui.detailId);if(!c){closeDetail();return;}
+  var d=$("detail"),st=d.scrollTop,old=d.querySelector(".steps"),sl=old?old.scrollLeft:0;
+  var a=avail(c),f=ui.por,b=baseOf(c);
+  var h='<div class="dbtns"><button class="round" data-act="closeDetail" aria-label="Zurück">'+svg(IC.back)+'</button><button class="round" data-act="editCk" data-id="'+esc(c.id)+'" aria-label="Bearbeiten">'+svg(IC.edit)+'</button></div><div class="dwrap">';
+  h+='<div class="dhero"><div class="clip">'+art(c)+'<div class="shade"></div></div><div class="ttl"><b>'+esc(c.name)+'</b><span>'+esc(c.tagline||"")+'</span></div><button class="dheart'+(c.fav?' on':'')+'" data-act="favCk" data-id="'+esc(c.id)+'" aria-label="Favorit">'+svg(IC.heart)+'</button></div><div class="dbody">';
+  h+='<div class="stats"><div><small>Komplexität</small>'+cxBars(c.cx)+'</div><div class="mid"><small>Zubereitung</small><b>'+(c.time?c.time+' Min':'—')+'</b></div><div class="rt"><small>Methode</small><b>'+esc(c.method||"—")+'</b></div></div>';
+  if(c.desc)h+='<p class="desc"><span class="hl">'+esc(c.name)+'</span> '+esc(c.desc)+'</p>';
+  if(state.setup){h+='<div style="margin-bottom:6px">'+(a.miss.length?'<span class="tag '+(a.miss.length===1?'warn':'bad')+'">Fehlt: '+esc(a.miss.join(", "))+'</span>':'<span class="tag ok">Du kannst ihn gerade mixen</span>')+(a.low.length?' <span class="tag warn">'+esc(a.low.join(", "))+' fast leer</span>':'')+'</div>';}
+  h+='<hr><div class="dh"><div><h3>Zutaten</h3><div class="m">Anzahl der Portionen '+svg(IC.arrow,"")+'</div></div><div class="por">'+[1,2,4].map(function(n){return '<button data-act="por" data-v="'+n+'" class="'+(f===n?'on':'')+'">x '+n+'</button>';}).join("")+'</div></div>';
+  c.ings.forEach(function(r){
+    var g=ing(r.i),lv=g?g.level:0,ic=g&&(g.cat==="Spirituosen"||g.cat==="Liköre")?IC.bottle:(g&&g.cat==="Frisch"?IC.leaf:IC.drop);
+    h+='<div class="ir l'+lv+'">'+svg(ic)+'<span class="nm">'+esc(g?g.name:"Unbekannt")+(r.o?' <span class="opt">optional</span>':'')+'</span><span class="q">'+esc(scaleQty(r.q||"",f))+'</span></div>';
+  });
+  if(state.setup&&a.miss.length)h+='<div class="btns"><button class="btn accent" data-act="missToShop" data-id="'+esc(c.id)+'">Fehlendes auf die Einkaufsliste</button></div>';
+  var gar=String(c.garnish||"").split(/[,\n]/).map(function(x){return x.trim();}).filter(Boolean);
+  if(gar.length)h+='<h3 style="font-size:30px;margin:30px 0 8px;letter-spacing:-.02em">Garnierung</h3><ul class="garn">'+gar.map(function(x){return '<li>'+esc(x)+'</li>';}).join("")+'</ul>';
+  h+='<hr><div class="dh"><div><h3>Rezept</h3></div><div style="text-align:right"><button class="mixbtn'+(wl?' on':'')+'" data-act="mixmode">Mixmodus</button><div class="m" style="margin-top:6px">Bildschirm am Einschlafen hindern</div></div></div>';
+  if(c.steps.length){
+    h+='<div class="steps" id="steps">'+c.steps.map(function(s,i){
+      var last=i===c.steps.length-1;
+      return '<div class="step"><div class="sh"><i></i><b>Schritt '+(i+1)+'/'+c.steps.length+'</b><button class="nx" data-act="nextStep" aria-label="Weiter">'+svg(last?IC.check:IC.arrow)+'</button></div><p>'+stepHtml(s,f)+'</p></div>';
+    }).join("")+'</div>';
+  }else h+='<div class="muted">Noch keine Schritte hinterlegt.</div>';
+  h+='<hr><h3 style="font-size:30px;margin:0 0 6px;letter-spacing:-.02em">Rezept bewerten</h3><div class="m muted">Speichere deine Bewertung dieses Rezepts zur späteren Verwendung.</div><div class="stars">';
+  for(var i=1;i<=5;i++)h+='<button data-act="rate" data-v="'+i+'" class="'+(c.rating>=i?'on':'')+'" aria-label="'+i+' Sterne">'+svg(IC.star)+'</button>';
+  h+='</div></div></div>';
+  d.innerHTML=h;d.scrollTop=st;var ns=d.querySelector(".steps");if(ns)ns.scrollLeft=sl;
+}
+function openDetail(id){
+  ui.detailId=id;ui.por=1;$("detail").classList.add("open");document.body.style.overflow="hidden";
+  renderDetail();$("detail").scrollTop=0;
+}
+function closeDetail(){
+  if(wl){try{wl.release();}catch(e){}wl=null;}
+  ui.detailId=null;$("detail").classList.remove("open");$("detail").innerHTML="";document.body.style.overflow="";
+}
+async function toggleMix(){
+  if(wl){try{await wl.release();}catch(e){}wl=null;renderDetail();return;}
+  try{
+    wl=await navigator.wakeLock.request("screen");
+    wl.addEventListener("release",function(){wl=null;renderDetail();});
+    toast("Der Bildschirm bleibt jetzt an");
+  }catch(e){wl=null;toast("Das geht auf diesem Gerät leider nicht");}
+  renderDetail();
+}
+
+/* ---------- Sheets ---------- */
+function openSheet(html){$("sheet").innerHTML=html;$("ov").classList.add("open");$("sheet").scrollTop=0;}
+function closeSheet(){$("ov").classList.remove("open");}
+
+function openFilter(){
+  var bases=[];state.cocktails.forEach(function(c){var b=baseOf(c);if(b&&bases.indexOf(b)<0)bases.push(b);});bases.sort();
+  var h='<h3>Filter</h3><label>Verfügbarkeit</label><div class="chips" style="flex-wrap:wrap;overflow:visible;margin:0">'+chip("fav2","all","Alle",ui.fAvail)+chip("fav2","mix","Mixbar",ui.fAvail)+chip("fav2","near","Fast mixbar",ui.fAvail)+'</div>';
+  h+='<label>Basis</label><div class="chips" style="flex-wrap:wrap;overflow:visible;margin:0">'+chip("fbase","all","Alle",ui.fBase)+bases.map(function(b){return chip("fbase",b,b,ui.fBase);}).join("")+'</div>';
+  h+='<div class="btns"><button class="btn accent" data-act="close">Fertig</button><button class="btn ghost" data-act="fReset">Zurücksetzen</button></div>';
+  openSheet(h);
+}
+
+var edIng=null;
+function editIng(id){
+  var g=id?ing(id):null;
+  edIng=g?JSON.parse(JSON.stringify(g)):{id:"",name:"",cat:"Spirituosen",level:3,want:false,price:null,priceDate:"",deal:"",link:""};
+  var h='<h3>'+(g?'Zutat bearbeiten':'Neue Zutat')+'</h3>';
+  h+='<label>Name</label><input id="eName" value="'+esc(edIng.name)+'" placeholder="zum Beispiel Gin">';
+  h+='<label>Bereich</label><select id="eCat">'+CATS.map(function(c){return '<option'+(c===edIng.cat?' selected':'')+'>'+esc(c)+'</option>';}).join("")+'</select>';
+  h+='<label>Bestand</label><div class="lvls" id="eLvl">'+LEVELS.map(function(n){return '<button data-lv="'+n+'" class="l'+n+(edIng.level===n?' on':'')+'">'+LT[n]+'</button>';}).join("")+'</div>';
+  h+='<label>Preis in Euro</label><input id="ePrice" inputmode="decimal" placeholder="zum Beispiel 14,99" value="'+(edIng.price!=null?String(edIng.price).replace(".",","):"")+'">';
+  if(edIng.priceDate)h+='<div class="muted small" style="margin-top:4px">Preis Stand '+deDate(edIng.priceDate)+'</div>';
+  h+='<label>Aktion oder Hinweis</label><input id="eDeal" placeholder="zum Beispiel Black Friday 20 Prozent" value="'+esc(edIng.deal||"")+'">';
+  h+='<label>Amazon Link</label><input id="eLink" type="url" inputmode="url" autocapitalize="off" placeholder="Leer lassen für die Amazon Suche" value="'+esc(edIng.link||"")+'">';
+  h+='<label style="display:flex;align-items:center;gap:10px;margin-top:16px;color:#fff;font-size:16px"><input id="eWant" type="checkbox" style="width:22px;height:22px"'+(edIng.want?' checked':'')+'> Auf die Einkaufsliste setzen</label>';
+  h+='<div class="btns"><button class="btn accent" data-act="saveIng">Speichern</button><button class="btn ghost" data-act="close">Abbrechen</button>'+(g?'<button class="btn danger" data-act="delIng">Löschen</button>':'')+'</div>';
+  openSheet(h);
+}
+
+var edCk=null;
+function editCk(id){
+  var c=id?ckById(id):null;
+  edCk=c?JSON.parse(JSON.stringify(c)):{id:"",name:"",tagline:"",desc:"",glass:"Tumbler",base:"",method:"Geschüttelt",time:3,cx:1,color:"#e0a44a",ings:[{i:"",q:""},{i:"",q:""},{i:"",q:""}],steps:[],garnish:"",fav:false,rating:0,custom:true};
+  edCk._photo=null;edCk._del=false;
+  var rows=edCk.ings.map(function(r){var g=ing(r.i);return {n:g?g.name:"",q:r.q||"",o:!!r.o};});
+  var cur=c&&c.photo?imgLocal(c.id):null;
+  var h='<h3>'+(c?'Cocktail bearbeiten':'Neuer Cocktail')+'</h3>';
+  h+='<label>Name</label><input id="cName" value="'+esc(edCk.name)+'" placeholder="zum Beispiel Gin Tonic">';
+  h+='<label>Untertitel</label><input id="cTag" value="'+esc(edCk.tagline)+'" placeholder="zum Beispiel Frisch und herb">';
+  h+='<label>Beschreibung</label><textarea id="cDesc" style="min-height:80px" placeholder="Ein bis zwei Sätze zum Drink">'+esc(edCk.desc)+'</textarea>';
+  h+='<label>Foto</label><div class="photoprev" id="photoPrev"'+(cur?' style="background-image:url('+cur+')"':'')+'>'+(cur?'':'Kein Foto, Mixer zeichnet das Glas')+'</div><div class="btns" style="margin-top:8px"><button class="btn sm" data-act="photoPick">Foto wählen</button><button class="btn sm ghost" data-act="photoDel">Foto entfernen</button></div>';
+  h+='<label>Glas</label><select id="cGlass">'+GLASSES.map(function(x){return '<option'+(x===edCk.glass?' selected':'')+'>'+esc(x)+'</option>';}).join("")+'</select>';
+  h+='<label>Farbe des Drinks</label><input id="cColor" type="color" value="'+esc(edCk.color)+'">';
+  h+='<label>Basis</label><input id="cBase" list="baseList" value="'+esc(edCk.base)+'" placeholder="zum Beispiel Gin"><datalist id="baseList">'+BASES.map(function(b){return '<option value="'+esc(b)+'">';}).join("")+'</datalist>';
+  h+='<label>Methode</label><select id="cMethod">'+METHODS.map(function(x){return '<option'+(x===edCk.method?' selected':'')+'>'+esc(x)+'</option>';}).join("")+'</select>';
+  h+='<label>Zubereitung in Minuten</label><input id="cTime" inputmode="numeric" value="'+(edCk.time||"")+'" placeholder="3">';
+  h+='<label>Komplexität</label><div class="lvls c3" id="cCx">'+[1,2,3].map(function(n){return '<button data-act="cxSet" data-v="'+n+'" class="'+(edCk.cx===n?'on':'')+'">'+['Einfach','Mittel','Aufwendig'][n-1]+'</button>';}).join("")+'</div>';
+  h+='<label>Zutaten</label><div id="cRows">'+rows.map(rowHtml).join("")+'</div><button class="btn sm" data-act="addRow">Zutat hinzufügen</button>';
+  h+='<datalist id="ingList">'+state.ingredients.map(function(g){return '<option value="'+esc(g.name)+'">';}).join("")+'</datalist>';
+  h+='<label>Schritte, einer pro Zeile</label><textarea id="cSteps" placeholder="Jede Zeile wird ein Schritt">'+esc(edCk.steps.join("\n"))+'</textarea>';
+  h+='<label>Garnitur, mit Komma getrennt</label><input id="cGarn" value="'+esc(edCk.garnish)+'" placeholder="zum Beispiel Limettenscheibe, Minzzweig">';
+  h+='<div class="btns"><button class="btn accent" data-act="saveCk">Speichern</button><button class="btn ghost" data-act="close">Abbrechen</button>'+(c?'<button class="btn danger" data-act="delCk" data-id="'+esc(c.id)+'">Löschen</button>':'')+'</div>';
+  openSheet(h);
+}
+function rowHtml(r){
+  return '<div class="rrow"><input class="rn" list="ingList" placeholder="Zutat" value="'+esc(r.n)+'"><input class="rq" placeholder="Menge, zum Beispiel 4 cl" value="'+esc(r.q)+'"><button class="x" data-act="delRow" aria-label="Zeile entfernen">×</button><label class="optl"><input type="checkbox" class="ro"'+(r.o?' checked':'')+'> Optional, zählt nicht für mixbar</label></div>';
+}
+
+/* ---------- Aktionen ---------- */
+function addIngredient(name,cat){
+  var g=ingByName(name);if(g)return g;
+  g={id:uid("i"),name:name.trim(),cat:cat||"Sonstiges",level:0,want:false,price:null,priceDate:"",deal:"",link:""};
+  state.ingredients.push(g);return g;
+}
+document.addEventListener("click",function(e){
+  if(e.target===$("ov")){closeSheet();return;}
+  var t=e.target.closest("[data-act],[data-tab],[data-lv]");
+  if(!t)return;
+  if(t.hasAttribute("data-tab")){if(ui.detailId)closeDetail();setTab(t.getAttribute("data-tab"));return;}
+  if(t.hasAttribute("data-lv")&&edIng){
+    edIng.level=+t.getAttribute("data-lv");
+    Array.prototype.forEach.call($("eLvl").children,function(b){b.classList.toggle("on",b===t);});return;
+  }
+  var act=t.getAttribute("data-act"),id=t.getAttribute("data-id"),v=t.getAttribute("data-v");
+  switch(act){
+    case "favf":ui.favF=v;renderFav();break;
+    case "barf":ui.barF=v;renderBar();break;
+    case "seg":ui.seg=v;renderBar();break;
+    case "goBar":setTab("bar");break;
+    case "openCk":openDetail(id);break;
+    case "closeDetail":closeDetail();break;
+    case "openFilter":openFilter();break;
+    case "fav2":ui.fAvail=v;openFilter();renderKarte();break;
+    case "fbase":ui.fBase=v;openFilter();renderKarte();break;
+    case "fReset":ui.fAvail="all";ui.fBase="all";openFilter();renderKarte();break;
+    case "close":closeSheet();break;
+    case "newCk":editCk(null);break;
+    case "editCk":editCk(id);break;
+    case "newIng":editIng(null);break;
+    case "editIng":editIng(id);break;
+    case "por":ui.por=+v;renderDetail();break;
+    case "mixmode":toggleMix();break;
+    case "nextStep":{
+      var sc=$("steps"),step=t.closest(".step");if(!sc||!step)break;
+      var nx=step.nextElementSibling;
+      if(nx)sc.scrollTo({left:nx.offsetLeft-sc.firstElementChild.offsetLeft,behavior:"smooth"});else sc.scrollTo({left:0,behavior:"smooth"});
+      break;
+    }
+    case "rate":{var c0=ckById(ui.detailId);if(c0){c0.rating=c0.rating===+v?0:+v;save();}break;}
+    case "setupDone":state.setup=true;save();toast("Bestand gespeichert");break;
+    case "cycle":{var g=ing(id);if(g){g.level=g.level===0?3:g.level-1;if(g.level>1)g.want=false;save();}break;}
+    case "bought":{var b=ing(id);if(b){b.level=3;b.want=false;save();toast(b.name+" ist wieder voll");}break;}
+    case "shopAdd":{
+      var inp=$("shopAdd"),nm=(inp.value||"").trim();if(!nm)break;
+      var g2=ingByName(nm)||addIngredient(nm,"Sonstiges");g2.want=true;save();toast(g2.name+" steht auf der Liste");break;
+    }
+    case "favCk":{var c=ckById(id);if(c){c.fav=!c.fav;save();toast(c.fav?"Zu den Favoriten hinzugefügt":"Aus den Favoriten entfernt");}break;}
+    case "missToShop":{
+      var c2=ckById(id);if(!c2)break;
+      c2.ings.forEach(function(r){var g4=ing(r.i);if(g4&&!r.o&&g4.level===0)g4.want=true;});
+      save();toast("Fehlende Zutaten stehen auf der Liste");break;
+    }
+    case "delCk":{var c3=ckById(id);if(c3&&confirm(c3.name+" wirklich löschen?")){state.cocktails=state.cocktails.filter(function(x){return x.id!==id;});try{localStorage.removeItem("mixer_img_"+id);}catch(e){}save();closeSheet();closeDetail();}break;}
+    case "saveIng":saveIng();break;
+    case "delIng":{
+      var d=edIng&&edIng.id;if(!d)break;
+      var used=state.cocktails.filter(function(c){return c.ings.some(function(r){return r.i===d;});}).map(function(c){return c.name;});
+      if(used.length){alert("Diese Zutat wird noch benutzt in: "+used.join(", ")+". Entferne sie zuerst aus den Rezepten.");break;}
+      if(confirm("Zutat wirklich löschen?")){state.ingredients=state.ingredients.filter(function(x){return x.id!==d;});save();closeSheet();}
+      break;
+    }
+    case "addRow":{var w=document.createElement("div");w.innerHTML=rowHtml({n:"",q:"",o:false});$("cRows").appendChild(w.firstChild);break;}
+    case "delRow":{var r=t.closest(".rrow");if(r)r.remove();break;}
+    case "cxSet":{edCk.cx=+v;Array.prototype.forEach.call($("cCx").children,function(b){b.classList.toggle("on",b===t);});break;}
+    case "photoPick":$("photoIn").click();break;
+    case "photoDel":{edCk._photo=null;edCk._del=true;var pp=$("photoPrev");pp.style.backgroundImage="";pp.textContent="Kein Foto, Mixer zeichnet das Glas";break;}
+    case "saveCk":saveCk();break;
+    case "restoreSeed":{
+      var added=0;
+      SEED_ING.forEach(function(a){if(!ing(a[0]))state.ingredients.push({id:a[0],name:a[1],cat:a[2],level:0,want:false,price:null,priceDate:"",deal:"",link:""});});
+      SEED_CK.forEach(function(s){if(!ckById(s.id)){state.cocktails.push(seedCk(s));added++;}});
+      save();toast(added?added+" Cocktail"+(added>1?"s":"")+" wiederhergestellt":"Alle Standardcocktails sind schon da");break;
+    }
+    case "exportData":exportData();break;
+    case "importData":$("fileIn").click();break;
+  }
+});
+document.addEventListener("input",function(e){
+  if(e.target.id==="q"){ui.q=e.target.value;var p=e.target.selectionStart;renderKarte();var n=$("q");n.focus();try{n.setSelectionRange(p,p);}catch(x){}}
+  if(e.target.id==="barQ"){ui.barQ=e.target.value;var p2=e.target.selectionStart;renderBar();var n2=$("barQ");n2.focus();try{n2.setSelectionRange(p2,p2);}catch(x){}}
+});
+document.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.id==="shopAdd"){e.preventDefault();var b=document.querySelector('[data-act="shopAdd"]');if(b)b.click();}});
+
+function saveIng(){
+  var name=$("eName").value.trim();
+  if(!name){toast("Bitte einen Namen eintragen");return;}
+  var other=ingByName(name);
+  if(other&&other.id!==edIng.id){toast("Diese Zutat gibt es schon");return;}
+  var price=parsePrice($("ePrice").value);
+  var g=edIng.id?ing(edIng.id):null;
+  if(!g){g={id:uid("i")};state.ingredients.push(g);g.price=null;g.priceDate="";}
+  if(price!==g.price)g.priceDate=price!=null?todayIso():"";
+  g.name=name;g.cat=$("eCat").value;g.level=edIng.level;g.price=price;
+  g.deal=$("eDeal").value.trim();g.link=$("eLink").value.trim();g.want=$("eWant").checked;
+  save();closeSheet();
+}
+function saveCk(){
+  var name=$("cName").value.trim();
+  if(!name){toast("Bitte einen Namen eintragen");return;}
+  var rows=[];
+  Array.prototype.forEach.call(document.querySelectorAll("#cRows .rrow"),function(r){
+    var n=r.querySelector(".rn").value.trim(),q=r.querySelector(".rq").value.trim(),o=r.querySelector(".ro").checked;
+    if(!n)return;
+    var g=addIngredient(n,"Sonstiges"),row={i:g.id,q:q};if(o)row.o=true;rows.push(row);
+  });
+  if(!rows.length){toast("Bitte mindestens eine Zutat eintragen");return;}
+  var c=edCk.id?ckById(edCk.id):null;
+  if(!c){c={id:uid("ck"),fav:false,custom:true,rating:0};state.cocktails.push(c);}
+  c.name=name;c.tagline=$("cTag").value.trim();c.desc=$("cDesc").value.trim();c.glass=$("cGlass").value;c.color=$("cColor").value;
+  c.base=$("cBase").value.trim();c.method=$("cMethod").value;c.time=parseInt($("cTime").value,10)||0;c.cx=edCk.cx;
+  c.ings=rows;c.steps=$("cSteps").value.split(/\n+/).map(function(x){return x.trim();}).filter(Boolean);c.garnish=$("cGarn").value.trim();
+  if(edCk._photo){try{localStorage.setItem("mixer_img_"+c.id,edCk._photo);c.photo=true;pushImg(c.id,edCk._photo);}catch(e){toast("Das Foto ist zu groß für den Speicher");}}
+  else if(edCk._del&&c.photo){c.photo=false;try{localStorage.removeItem("mixer_img_"+c.id);}catch(e){}}
+  save();closeSheet();toast("Cocktail gespeichert");
+}
+$("photoIn").addEventListener("change",function(){
+  var f=this.files&&this.files[0];this.value="";if(!f||!edCk)return;
+  var fr=new FileReader();
+  fr.onload=function(){
+    var im=new Image();
+    im.onload=function(){
+      var sc=Math.min(1,900/Math.max(im.width,im.height)),cv=document.createElement("canvas");
+      cv.width=Math.round(im.width*sc);cv.height=Math.round(im.height*sc);
+      cv.getContext("2d").drawImage(im,0,0,cv.width,cv.height);
+      edCk._photo=cv.toDataURL("image/jpeg",0.72);edCk._del=false;
+      var pp=$("photoPrev");if(pp){pp.style.backgroundImage="url("+edCk._photo+")";pp.textContent="";}
+    };
+    im.onerror=function(){toast("Das Foto konnte nicht gelesen werden");};
+    im.src=fr.result;
+  };
+  fr.readAsDataURL(f);
+});
+
+/* ---------- Datensicherung ---------- */
+function exportData(){
+  var blob=new Blob([JSON.stringify(state)],{type:"application/json"});
+  var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="mixer_sicherung_"+todayIso()+".json";
+  document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1500);
+}
+$("fileIn").addEventListener("change",function(){
+  var f=this.files&&this.files[0];if(!f)return;
+  var rd=new FileReader();
+  rd.onload=function(){
+    try{
+      var d=JSON.parse(rd.result);
+      if(!d||!Array.isArray(d.ingredients)||!Array.isArray(d.cocktails))throw 0;
+      if(!confirm("Aktuelle Daten durch die Sicherung ersetzen?"))return;
+      try{localStorage.setItem("mixer_vor_import",JSON.stringify(state));}catch(e){}
+      d.rev=Math.max(d.rev||0,state.rev||0);
+      state=migrate(d);save();toast("Sicherung geladen");
+    }catch(e){alert("Die Datei konnte nicht gelesen werden.");}
+  };
+  rd.readAsText(f);this.value="";
+});
+
+/* ---------- Firebase Sync ---------- */
+var FB=window.MIXER_FIREBASE||{},hasFB=!!(FB.apiKey&&FB.projectId);
+var sharedDoc=null,lastX="",pushing=false,pend=false;
+function canon(o){
+  if(Array.isArray(o))return "["+o.map(canon).join(",")+"]";
+  if(o&&typeof o==="object")return "{"+Object.keys(o).sort().map(function(k){return JSON.stringify(k)+":"+canon(o[k]);}).join(",")+"}";
+  return JSON.stringify(o);
+}
+function clean(o){return JSON.parse(JSON.stringify(o));}
+function syncMsg(t){syncText=t;var n=$("syncNote");if(n)n.textContent=t;}
+function schedulePush(){if(!sharedDoc)return;clearTimeout(pushTimer);pushTimer=setTimeout(pushNow,500);}
+function pushNow(){
+  pushTimer=null;
+  if(!sharedDoc)return;
+  var j=canon(state);if(j===lastX)return;
+  if(pushing){pend=true;return;}
+  pushing=true;lastX=j;
+  sharedDoc.set(clean(state)).catch(function(){syncMsg("Das Speichern für Julia hat nicht geklappt.");}).then(function(){pushing=false;if(pend){pend=false;pushNow();}});
+}
+function pushImg(id,data){
+  if(!fbApi)return;
+  fbApi.fs.setDoc(fbApi.fs.doc(fbApi.db,FB.collection,"mixer_foto_"+id),{d:data}).catch(function(){});
+}
+function applyRemote(d){
+  var c=clean(d);
+  if(!Array.isArray(c.ingredients)||!Array.isArray(c.cocktails))return;
+  state=migrate(c);lastX=canon(state);persist();render();
+}
+async function connect(getRef,okMsg){
+  var ref=await getRef();
+  var snap=await ref.get();
+  var remote=snap.exists?snap.data():null;
+  if(remote&&Array.isArray(remote.ingredients)&&(remote.rev||0)>=(state.rev||0)){applyRemote(remote);}
+  else{await ref.set(clean(state));lastX=canon(state);}
+  sharedDoc=ref;
+  syncMsg(okMsg);render();
+  ref.onSnapshot(function(s){
+    if(!s.exists)return;
+    var d=s.data();
+    if(pushTimer)return;
+    if((d.rev||0)<(state.rev||0))return;
+    if(canon(d)!==lastX)applyRemote(d);
+  },function(){});
+}
+function startFB(){
+  syncMsg("Verbinde mit Firebase …");
+  connect(async function(){
+    var app=await import("https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js");
+    var fs=await import("https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js");
+    var cfg=Object.assign({},FB);delete cfg.collection;delete cfg.room;
+    var a=app.initializeApp(cfg),db=fs.getFirestore(a),dr=fs.doc(db,FB.collection||"rooms",FB.room||"mixer");
+    fbApi={fs:fs,db:db};
+    var wrap=function(s){return {exists:s.exists(),data:function(){return s.data();}};};
+    return {
+      get:function(){return fs.getDoc(dr).then(wrap);},
+      set:function(d){return fs.setDoc(dr,d);},
+      onSnapshot:function(next,err){return fs.onSnapshot(dr,function(s){next(wrap(s));},err);}
+    };
+  },"Live verbunden. Änderungen erscheinen bei Julia und dir sofort.").catch(function(){
+    syncMsg("Die Verbindung zu Firebase hat nicht geklappt. Bitte Einstellungen und Regeln prüfen.");
+  });
+}
+
+render();
+setTab("karte");
+if(hasFB)startFB();
+})();
+</script>
+</body>
+</html>
